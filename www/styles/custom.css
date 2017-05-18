@@ -1,0 +1,65 @@
+@font-face {
+ font-family: 'cabin', sans-serif;
+ src:url('../font/Cabin-Regular.ttf') format('ttf');
+}
+
+
+  body {
+   font-family: 'cabin', sans-serif;
+  }
+
+.ui-btn{
+  font-family: 'cabin', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+div[data-role="content"] {
+  display: block;
+  width: 93%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+div[data-role="header"] p {
+  text-align: center;
+}
+
+div[data-role="header"] p a {
+  color: white !important;
+  text-decoration: none;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 16pt;
+}
+
+label small {
+  color: slategray;
+}
+
+
+
+.text-center {
+  text-align: center;
+}
+
+.orange-button {
+  display: block;
+  background: #00AC90;
+  box-shadow: 0 1px 2px #AAA;
+  color: #333 !important; /* This is getting overridden by a stylesheet loaded before this one. TODO? #333 */
+  text-shadow: none;
+  margin: 10px 0;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.orange-button:hover {
+  background: #00AC90;
+}

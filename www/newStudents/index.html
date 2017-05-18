@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- <meta name="viewport" content="width=device-width, length=device-length, minimum-scale=1, maximum-scale=1" /> -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, length=device-length" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <title>BHS New Students</title>
+
+    <link rel="stylesheet" type="text/css" href="../styles/BYSMobile.min.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/font-awesome.min.css" />
+    
+    <script type="text/javascript" src="../scripts/libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/libs/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../scripts/libs/jquery.pageset.js"></script>
+    <script type="text/javascript" src="../scripts/index.js"></script>
+
+<body>
+    <div class="app">
+        <div data-role="page" id="home" data-theme="a" >
+            <div data-role="content" data-theme="a">
+                <a href="#myPanel" > <i class="fa fa-bars"></i> </a>
+
+                <h1>BHS New Students</h1>
+                
+                <button id="button" data-theme="a" onclick="gotoPage('index.html')">Topic 1</button>
+                <button id="button" data-theme="b" onclick="gotoPage('index.html')"href="#">Topic 2</button>
+                <button id="button" data-theme="c" onclick="gotoPage('index.html')"href="#">Topic 3</button>
+                <button id="button" data-theme="d" onclick="gotoPage('index.html')"href="#">Topic 4</button>
+                                
+            </div>
+                    
+            <!--Left Panel-->
+            <div data-role="panel" id="myPanel">
+                <div align=“center”>
+                    <!-- <img src="images/askbys.png" width="60%"> -->
+                </div>
+                <a href="#" onclick="gotoPage('../index.html')">Home</a>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        app.initialize();
+        
+        function gotoPage(url) {
+            window.open(url)
+        }
+    </script>
+</body>
+
+</html>
